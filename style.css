@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1c1c1c;
+  color: #000;
+}
+
+.top-bar {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+}
+
+nav {
+  background: #FF850B;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px ;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #ddd;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login {
+  color: #f3f3f3;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ED8F32;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+button {
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.image-content img {
+  max-height: 400px;
+  width: auto;
+}
+
+.benefits {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.benefits div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
