@@ -14,10 +14,11 @@ body {
 }
 
 nav {
-  background: #FF850B;
+  background: #f97316;
   display: flex;
   justify-content: space-between;
-  padding: 5px ;
+  align-items: center;
+  padding: 10px 40px;
 }
 
 .logo {
@@ -29,6 +30,28 @@ nav {
 .logo span {
   color: #ddd;
 }
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-center li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.login a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 nav ul {
   list-style: none;
@@ -51,9 +74,11 @@ nav ul li a {
   justify-content: space-between;
   align-items: center;
   background: #ED8F32;
-  padding: 60px 40px;
+  padding:40px 40px;
   flex-wrap: wrap;
+  height: 61vh;
 }
+
 
 .text-content {
   max-width: 500px;
@@ -80,11 +105,6 @@ button {
   cursor: pointer;
 }
 
-.image-content img {
-  max-height: 400px;
-  width: auto;
-}
-
 .benefits {
   background: #111;
   color: #fff;
@@ -92,11 +112,20 @@ button {
   justify-content: space-around;
   padding: 20px 0;
   font-size: 16px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 .benefits div {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.image-content{
+  bottom: 35px;
+  right: 35px;
+  position: fixed;
 }
 
