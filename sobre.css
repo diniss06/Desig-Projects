@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #1c1c1c;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff7900;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+    flex: 1;
+}
+
+.navigation {
+    flex: 2;
+    text-align: center;
+}
+
+.navigation ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login {
+    flex: 1;
+    text-align: right;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+} 
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 50px 40px;
+    position: relative;
+}
+
+.main-content {
+    max-width: 60%;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.watermark {
+    font-size: 48px;
+    font-weight: bold;
+    color: #d3d3d3;
+    text-shadow: 2px 2px 3px #aaa;
+    position: absolute;
+    right: 50px;
+    top: 200px;
+    user-select: none;
+}
+
+.benefits {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-size: 16px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.benefits div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.benefits i {
+    color: #ff7900;
+    font-size: 20px;
+}
