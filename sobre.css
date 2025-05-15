@@ -5,13 +5,21 @@ body {
     color: #1c1c1c;
 }
 
-.header {
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+    flex: 1;
+}
+
+nav {
+    background: #f97316;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ff7900;
     padding: 15px 30px;
-    color: white;
 }
 
 .logo {
@@ -22,24 +30,34 @@ body {
     flex: 1;
 }
 
-.navigation {
-    flex: 2;
-    text-align: center;
-}
-
-.navigation ul {
-    list-style: none;
-    display: inline-flex;
+.nav-center {
+    display: flex;
     gap: 30px;
+    list-style: none;
+    justify-content: center;
+    flex: 2;
     margin: 0;
     padding: 0;
 }
 
-.navigation a {
-    text-decoration: none;
+.nav-center li a {
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login {
+    flex: 1;
+    text-align: right;
+}
+
+.login a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
 }
+
 
 .login {
     flex: 1;

@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+nav {
+    background: #f97316;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    flex: 1;
+}
+
+.nav-center {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+    flex: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login {
+    flex: 1;
+    text-align: right;
+}
+
+.login a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.apoio-section {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.apoio-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.apoio-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apoio-form input,
+.apoio-form textarea {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+.apoio-form button {
+    background: #f97316;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 120px;
+}
+
+.apoio-form button:hover {
+    background: #e85f00;
+}
+
+.benefits {
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+}
+
+.benefits div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

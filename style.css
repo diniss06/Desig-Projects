@@ -53,21 +53,49 @@ nav {
 }
 
 
-nav ul {
-  list-style: none;
+nav {
+  background: #f97316;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
 }
 
-nav ul li a {
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+}
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  flex: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-center li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.login {
+  flex: 1;
+  text-align: right;
+}
+
+.login a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.login {
-  color: #f3f3f3;
-}
 
 .hero {
   display: flex;
