@@ -1,0 +1,97 @@
+/* ==========  VARIÁVEIS  ========== */
+:root{
+  --nutri-orange:#f97316;
+  --card-bg:rgba(60,30,0,.75);
+  --text-light:#fff;
+}
+
+/* ==========  RESET BÁSICO  ========== */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;}
+
+html,body{
+  height:100%;
+}
+
+/* ==========  FUNDO GRADIENTE  ========== */
+body{
+  background:linear-gradient(135deg,#7b3b10 0%,var(--nutri-orange) 100%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px;          /* respiro para ecrãs pequenos */
+}
+
+/* ==========  CARTÃO (login-container)  ========== */
+.login-container{
+  width:420px;
+  max-width:100%;
+  background:var(--card-bg);
+  backdrop-filter:blur(4px);
+  padding:50px 60px;
+  border-radius:32px;
+  box-shadow:0 0 30px rgba(0,0,0,.35);
+  color:var(--text-light);
+}
+
+@media(max-width:480px){
+  .login-container{padding:35px 30px;}
+}
+
+/* ==========  CABEÇALHO  ========== */
+.login-container h2{
+  margin-bottom:35px;
+  font-size:24px;
+  text-align:center;
+}
+
+/* ==========  GRUPO DE INPUTS  ========== */
+.input-group{margin-bottom:25px;}
+
+.input-label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.input{
+  width:100%;
+  padding:14px 16px;
+  border:none;
+  border-radius:6px;
+  background:rgba(255,255,255,.25);
+  color:#eee;
+  font-size:15px;
+}
+
+.input::placeholder{color:rgba(255,255,255,.55);}
+.input:focus{outline:2px solid var(--nutri-orange);}
+
+/* ==========  BOTÕES  ========== */
+.button, .login-container button{
+  width:100%;
+  padding:12px 0;
+  border:none;
+  border-radius:20px;
+  background:#000;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:10px;
+  transition:opacity .25s;
+}
+
+.button:hover,
+.login-container button:hover{opacity:.85;}
+
+/* ===== “Registo” botão = mesma classe para coerência */
+.login-container button{
+  margin-top:18px;            /* ligeiro espaçamento extra */
+}
+
+/* ==========  ERROS  ========== */
+.error{
+  color:#ff6b6b;
+  font-size:14px;
+  margin-top:6px;
+  text-align:left;
+}

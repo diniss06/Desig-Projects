@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+    <title>Login Page</title>
+    <script src="db.js" defer></script>
+</head>
+<body>
+<div class="login-container">
+    <!-- login.html -->
+    <form id="loginForm">
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="email" class="input-label">Email:</label>
+            <input class="input" type="email" id="email" name="email" required/>
+        </div>
+        <div class="input-group">
+            <label for="password" class="input-label">Password:</label>
+            <input class="input" type="password" id="password" name="password" required/>
+        </div>
+        <div id="emailError" class="error"></div>
+        <div id="passwordError" class="error"></div>
+        <div id="wrongCredentials" class="error"></div>
+        <input class="button" type="submit" value="Submit"/>
+        <button class="input" onclick="location.href='register.html'"> Registo </button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

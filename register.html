@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+    <title>Register Page</title>
+    <script src="db.js" defer></script>
+</head>
+<body>
+<div class="login-container">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Register successfully!</p>
+        </div>
+
+    </div>
+
+    <!-- register.html -->
+    <form id="registerForm">
+        <h2>Register</h2>
+        <div class="input-group">
+            <label for="name" class="input-label">Name:</label>
+            <input class="input" type="text" id="name-register" name="name" required/>
+        </div>
+        <div class="input-group">
+            <label for="email" class="input-label">Email:</label>
+            <input class="input" type="email" id="email-register" name="email" required/>
+        </div>
+        <div class="input-group">
+            <label for="password" class="input-label">Password:</label>
+            <input class="input" type="password" id="password-register" name="password" required/>
+        </div>
+        <div id="email-error-register" class="error"></div>
+        <div id="password-error-register" class="error"></div>
+        <input class="button" type="submit" value="Submit"/>
+        <button class="input" onclick="_goToLogin()"> Back to login</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
