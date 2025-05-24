@@ -89,7 +89,7 @@ function checkAccount(email, password) {
                     localStorage.setItem('name', checkRequest.result.name);
                     sessionStorage.setItem('sessionValid', 'true');
                     console.log("Account founded successfully!")
-                    window.location.href = 'home.html';
+                    window.location.href = 'Inicio2.html';
                 } else { // If doesn't match we sent and error to the HTML
                     document.getElementById('wrongCredentials').innerText = 'Wrong credentials!';
                 }
