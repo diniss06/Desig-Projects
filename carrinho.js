@@ -14,7 +14,7 @@ function carregarCarrinho() {
             <img src="${item.imagem}" width="100">
             <h3>${item.nome}</h3>
             <p>Unidade: ${item.preco.toFixed(2)}€</p>
-            <label>Quantidade:
+            <label>Quantidade:  
               <input type="number" min="1" value="${item.quantidade}" onchange="atualizarQuantidade(${index}, this.value)">
             </label>
             <p>Total: ${subtotal.toFixed(2)}€</p>
@@ -47,7 +47,6 @@ function carregarCarrinho() {
     function finalizarCompra() {
       if (confirm("Tens a certeza que queres finalizar a compra?")) {
         localStorage.removeItem("carrinho");
-        alert("Compra finalizada com sucesso!");
         carregarCarrinho();
       }
     }

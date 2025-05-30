@@ -76,3 +76,5 @@ function _logout() {
     sessionStorage.removeItem('sessionValid');
     window.location.href = 'index.html';
 }
+
+ 
