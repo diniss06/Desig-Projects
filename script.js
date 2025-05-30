@@ -34,6 +34,8 @@ document.getElementById('loginForm')?.addEventListener('submit', function (event
     if (email && password) {
         checkAccount(email, password);
     }
+
+
 });
 
 // Get the registerForm and add an event for submit click
@@ -53,7 +55,7 @@ document.getElementById('registerForm')?.addEventListener('submit', function (ev
     * the object should have key: value, but if the variables have the same name
     * as the the field we want, we can just add the name of it
     */
-    const obj = {email, name, password};
+    const obj = { email, name, password };
 
     // Call the function with the created object
     createAccount(obj);

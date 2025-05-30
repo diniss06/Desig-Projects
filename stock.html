@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock de Produtos</title>
+    <link rel="stylesheet" href="stock.css">
+</head>
+
+<body>
+
+    <main class="stock-container">
+        <h2>Stock de Produtos</h2>
+
+        <div class="product" data-stock="10">
+            <img src="imagens/Max-titanium.png" alt="Max Titanium Whey Pro 1kg">
+            <div class="info">
+                <h3>Max Titanium Whey Pro 1kg</h3>
+                <p class="stock">10 em stock</p>
+                <p class="price">Unidade: 24.90€</p>
+            </div>
+            <button class="order-btn" disabled>Encomendar Produto</button>
+        </div>
+
+        <div class="product" data-stock="8">
+            <img src="imagens/Crea-ten.png" alt="5% Nutrition Crea-TEN">
+            <div class="info">
+                <h3>5% Nutrition Crea-TEN</h3>
+                <p class="stock">8 em stock</p>
+                <p class="price">Unidade: 34.90€</p>
+            </div>
+            <button class="order-btn" disabled>Encomendar Produto</button>
+        </div>
+
+        <div class="product" data-stock="0">
+            <img src="imagens/Iso100.png" alt="Dymatize ISO100 Whey Protein Isolate">
+            <div class="info">
+                <h3>Dymatize ISO100 Whey Protein Isolate</h3>
+                <p class="stock out">Sem stock!</p>
+                <p class="price">Unidade: 49.99€</p>
+            </div>
+            <button class="order-btn">Encomendar Produto</button>
+        </div>
+
+        <div class="product" data-stock="5">
+            <img src="imagens/Hydroxycut.png" alt="Muscletech Hydroxycut Super Elite">
+            <div class="info">
+                <h3>Muscletech Hydroxycut Super Elite</h3>
+                <p class="stock">5 em stock</p>
+                <p class="price">Unidade: 29.99€</p>
+            </div>
+            <button class="order-btn" disabled>Encomendar Produto</button>
+        </div>
+    </main>
+
+    <script src="Stock.js"></script>
+</body>
+
+</html>

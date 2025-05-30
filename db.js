@@ -12,7 +12,7 @@ const request = indexedDB.open(DB_NAME, 1);
 request.onupgradeneeded = function (event) {
     let db = event.target.result;
     if (!db.objectStoreNames.contains(STORE_NAME)) {
-        db.createObjectStore(STORE_NAME, {keyPath: 'email', autoIncrement: true});
+        db.createObjectStore(STORE_NAME, { keyPath: 'email', autoIncrement: true });
     }
 };
 
@@ -74,33 +74,60 @@ function createAccount(account) {
  * @param {string} password 
  */
 function checkAccount(email, password) {
+    const adminEmail = 'dinisjorge37@gmail.com';
+    const adminPassword = 'admin123';
 
+    // Verificar se é admin diretamente
+    if (email === adminEmail && password === adminPassword) {
+        sessionStorage.setItem('sessionValid', 'true');
+        localStorage.setItem('name', 'Admin');
+        window.location.href = 'stock.html';
+        return;
+    }
+
+    // Se não for admin, procurar no IndexedDB
     let transaction = db.transaction(STORE_NAME, "readwrite");
     let storeAccount = transaction.objectStore(STORE_NAME);
-
-    // Verify if the account already exists
     let checkRequest = storeAccount.get(email);
 
     checkRequest.onsuccess = function () {
-        Promise.all([request])
-            .then(() => {
-                // Check if the email and the password match
-                if(checkRequest.result.email === email && checkRequest.result.password === password) {
-                    localStorage.setItem('name', checkRequest.result.name);
-                    sessionStorage.setItem('sessionValid', 'true');
-                    console.log("Account founded successfully!")
-                    window.location.href = 'Inicio2.html';
-                } else { // If doesn't match we sent and error to the HTML
-                    document.getElementById('wrongCredentials').innerText = 'Wrong credentials!';
-                }
-            })
-            .catch((error) => { // In case of an error from the DB, the account doesn't exist and send an error to the HTML
-                document.getElementById('wrongCredentials').innerText = 'Account don\'t exist';
-                console.error("Error retrieving account:", error);
-            });
+        const user = checkRequest.result;
+
+        if (user && user.email === email && user.password === password) {
+            localStorage.setItem('name', user.name);
+            sessionStorage.setItem('sessionValid', 'true');
+            console.log("Conta encontrada com sucesso!");
+            window.location.href = 'Inicio.html';
+        } else {
+            document.getElementById('wrongCredentials').innerText = 'Credenciais erradas!';
+        }
     };
 
-    checkRequest.onerror = (event) => console.error("Error checking account:", event.target.error);
+    checkRequest.onerror = function (event) {
+        console.error("Erro ao verificar conta:", event.target.error);
+        document.getElementById('wrongCredentials').innerText = 'Erro ao aceder à conta.';
+    };
 }
 
 
+
+const form = document.querySelector('.login-form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio normal do formulário
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Credenciais predefinidas
+    const userEmail = 'dinisserra2015@gmail.com';
+    const userPassword = '12345';
+    const adminEmail = 'dinisjorge37@gmail.com';
+    const adminPassword = 'admin123';
+
+    if (email === userEmail && password === userPassword) {
+        window.location.href = 'stock.html'; // Redireciona para a página principal
+    } else if (email === adminEmail && password === adminPassword) {
+        localStorage.setItem('isAdminLoggedIn', 'true'); // Indica que o admin está logado
+        window.location.href = 'admin.html'; // Redireciona para a página de administração
+    }
+});
